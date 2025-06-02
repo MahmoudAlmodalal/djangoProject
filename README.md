@@ -30,19 +30,26 @@ A full-featured online bookstore with Django backend and responsive frontend.
 - PostgreSQL 14+
 - Redis (for caching)
 
-```bash
+
 # Clone with submodules (if any)
+```bash
 git clone --recurse-submodules https://github.com/yourrepo/bookstore.git
 cd bookstore
+```
 
 # Setup environment
+```bash
 python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
+```
 # .venv\Scripts\activate  # Windows
 
 # Install dependencies
+```bash
 pip install -r requirements/production.txt
+```
 ⚙️ Configuration
+```bash
 Create .env from .env.example:
 
 ini
@@ -51,19 +58,27 @@ SECRET_KEY=your-secret-key-here
 DATABASE_URL=postgres://user:pass@localhost:5432/bookstore
 STRIPE_API_KEY=sk_test_...
 Initialize database:
+```
 
-bash
+
+```bash
 python manage.py migrate
 python manage.py loaddata fixtures/initial_data.json
+```
 🧑‍💻 Development
 Command	Action
+```bash
 make run	Start dev server
 make test	Run pytest suite
 make coverage	Generate test coverage
-bash
+```
+
 # Run with Docker
+```bash
 docker-compose up --build
+```
 📂 Project Structure
+```bash
 bookstore/
 ├── apps/
 │   ├── accounts/       # User auth
@@ -74,13 +89,15 @@ bookstore/
 └── requirements/       # Split requirements
     ├── base.txt
     └── production.txt
+```
 🌐 Deployment
 Deploy on Heroku
 
-bash
 # Sample AWS EB config
+```bash
 eb init -p python-3.10 bookstore
 eb deploy production
+```
 🤝 Contribution
 Create issue describing proposed changes
 
@@ -113,7 +130,7 @@ Twitter: @BookHavenApp
 
 ### Additional Suggestions:
 1. **For API Documentation** (if applicable):
-```markdown
+
 ## 📡 API Endpoints
 `GET /api/books/` - List all books  
 `POST /api/orders/` - Create new order  
