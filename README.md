@@ -30,6 +30,7 @@ A full-featured online bookstore with Django backend and responsive frontend.
 - PostgreSQL 14+
 - Redis (for caching)
 
+```bash
 # Clone with submodules (if any)
 git clone --recurse-submodules https://github.com/yourrepo/bookstore.git
 cd bookstore
