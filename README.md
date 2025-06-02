@@ -1,4 +1,3 @@
-markdown
 # E-commerce Book Store
 
 A modern online bookstore built with Django, offering a seamless shopping experience for book lovers.
@@ -18,11 +17,10 @@ A modern online bookstore built with Django, offering a seamless shopping experi
 
 ## Technologies Used
 
-- **Backend**: Django, Django REST Framework (if using API)
+- **Backend**: Django
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap
 - **Database**: PostgreSQL/MySQL/SQLite
 - **Payment**: Stripe/PayPal integration
-- **Deployment**: Docker, AWS/Heroku (optional)
 
 ## Installation
 
