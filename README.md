@@ -26,8 +26,8 @@ A full-featured online bookstore with Django backend and responsive frontend.
 
 # Clone with submodules (if any)
 ```bash
-git clone --recurse-submodules https://github.com/yourrepo/bookstore.git
-cd bookstore
+git clone --recurse-submodules https://github.com/yourrepo/djangoProject.git
+cd lms
 ```
 
 # Setup environment
