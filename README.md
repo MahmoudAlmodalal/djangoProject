@@ -13,22 +13,15 @@ A full-featured online bookstore with Django backend and responsive frontend.
 - Shopping cart with session persistence
 - Order tracking system
 
-### 💳 Payment & Checkout
-- Stripe/PayPal integration
-- Multiple shipping options
-- Invoice generation (PDF)
-
 ### 🛠️ Admin Features
 - Dashboard with sales analytics
-- Bulk book import/export (CSV/Excel)
 - Inventory management
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.10+
-- PostgreSQL 14+
-- Redis (for caching)
+- SqlLite 
 
 
 # Clone with submodules (if any)
@@ -79,16 +72,42 @@ docker-compose up --build
 ```
 📂 Project Structure
 ```bash
-bookstore/
-├── apps/
-│   ├── accounts/       # User auth
-│   ├── catalog/        # Book models
-│   └── payment/        # Checkout logic
-├── static/             # CSS/JS
-├── templates/          # Base templates
-└── requirements/       # Split requirements
-    ├── base.txt
-    └── production.txt
+.
+├── db.sqlite3
+├── lms
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── lms_app
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── migrations
+│   ├── models.py
+│   ├── static
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── manage.py
+├── media
+│   └── photos
+├── photos
+│   ├── L4.png
+│   └── L5.png
+├── static
+│   ├── admin
+│   ├── bootstrap
+│   ├── dist
+│   └── plugins
+├── templates
+│   ├── base.html
+│   ├── pages
+│   └── parts
 ```
 🌐 Deployment
 Deploy on Heroku
@@ -115,8 +134,7 @@ Migration files (if any)
 MIT License - See LICENSE.md
 
 📬 Contact
-For security issues: security@bookhaven.example.com
-Twitter: @BookHavenApp
+Email: ghg17273@gmail.com
 
 
 ### Fixes Applied:
@@ -131,11 +149,6 @@ Twitter: @BookHavenApp
 ### Additional Suggestions:
 1. **For API Documentation** (if applicable):
 
-## 📡 API Endpoints
-`GET /api/books/` - List all books  
-`POST /api/orders/` - Create new order  
-[View Full API Docs](docs/api.md)
-For Screenshots:
 
 markdown
 ## 🖼️ Screenshots
