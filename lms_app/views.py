@@ -22,7 +22,7 @@ def index(request):
         'rentalBook' : Book.objects.filter(statas="rental").count(),
         'soldBook' : Book.objects.filter(statas="sold").count(),
     }
-    return render(request, 'pages\\index.html', context)
+    return render(request, 'pages/index.html', context)
 def book(request):
     search = Book.objects.all()
     title = None
@@ -35,7 +35,7 @@ def book(request):
         'books' : search,
         'categoryForm' : CategoryForm(),
     }
-    return render(request, 'pages\\book.html', context)
+    return render(request, 'pages/book.html', context)
 def update(request, id):
     book_id =  Book.objects.get(id=id)
     if request.method == 'POST':
@@ -48,11 +48,11 @@ def update(request, id):
     context = {
         'form': book_save,
     }
-    return render(request, 'pages\\update.html', context)
+    return render(request, 'pages/update.html', context)
 def delete(request, id):
     book_delete = get_object_or_404(Book, id=id)
     if request.method == 'POST':
         book_delete.delete()
         return  redirect('/')
-    return render(request, 'pages\\delete.html')
+    return render(request, 'pages/delete.html')
 
